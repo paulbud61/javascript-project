@@ -18,8 +18,12 @@
     "url": "https://github.com/goitacademy/parcel-project-template/issues"
   },
   "dependencies": {
+    "animate.css": "^4.1.1",
     "axios": "^1.6.2",
-    "modern-normalize": "^1.1.0"
+    "basiclightbox": "^5.0.4",
+    "modern-normalize": "^1.1.0",
+    "notiflix": "^3.2.6",
+    "swiper": "^11.0.5"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
