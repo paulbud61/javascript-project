@@ -1,0 +1,483 @@
+@media screen and (max-width: 320px) {
+  /* Fereastra modală */
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: calc(
+      100% - 40px
+    ); /* Ajustează lățimea la lățimea totală a ecranului minus marginile */
+    height: auto;
+    max-height: calc(
+      100% - 40px
+    ); /* Limitare la înălțimea maximă a ecranului minus marginile */
+    overflow-y: auto; /* Adaugă scrollbar dacă conținutul este prea lung */
+  }
+
+  #film-img {
+    width: 100%; /* Ajustează imaginea să fie 100% din lățimea containerului */
+    height: auto; /* Menține proporțiile imaginii */
+    border-radius: 5px;
+    background: lightgray 50% / cover no-repeat;
+    margin-top: 20px; /* Redu spațiul de sus pentru imagine */
+    margin-bottom: 10px; /* Adaugă spațiu între imagine și titlu */
+  }
+  .icon {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+  }
+  /* Cardul filmului */
+  .card {
+    flex-direction: column; /* Așează elementele într-o singură coloană */
+  }
+
+  /* Posterul filmului */
+  .poster {
+    order: 1; /* Așează posterul în partea de sus */
+  }
+
+  /* Detaliile filmului */
+  .details {
+    order: 2; /* Așează detaliile sub poster */
+  }
+
+  /* Spațiu între elementele înrămate */
+
+  .item,
+  .about {
+    margin-top: 10px;
+    font-size: 12px;
+    color: #8c8c8c; /* Culorile originale */
+  }
+
+  .about {
+    text-transform: uppercase;
+    color: #000; /* Culorile originale */
+    margin-top: 20px;
+  }
+
+  /* Stilizare pentru butoane */
+  #btnWatched,
+  #btnQueue {
+    padding: 10px 12px;
+    margin-top: 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+  }
+
+  #btnWatched {
+    background: #b92f2c; /* Culorile originale */
+    color: #fff; /* Culorile originale */
+    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  }
+
+  #btnQueue {
+    border: 1px solid #000; /* Culorile originale */
+    background: #fff; /* Culorile originale */
+    color: #b92f2c; /* Culorile originale */
+  }
+  #btnWatched,
+  #btnQueue {
+    padding: 10px 12px;
+    margin-top: 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #btnQueue:hover,
+  #btnQueue:focus {
+    background: #b92f2c;
+    color: #fff;
+    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  }
+}
+@media screen and (min-width: 320px) {
+  /* Fereastra modală */
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 87.5%;
+    height: 930px;
+    flex-shrink: 0;
+  }
+
+  #film-img {
+    width: 240px;
+    height: 357px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: lightgray 50% / cover no-repeat;
+    margin: 0 auto;
+  }
+
+  /* Cardul filmului */
+  .card {
+    flex-direction: column; /* Așează elementele într-o singură coloană */
+  }
+
+  /* Posterul filmului */
+  .poster {
+    order: 1; /* Așează posterul în partea de sus */
+    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+  }
+
+  /* Detaliile filmului */
+  .details {
+    order: 2; /* Așează detaliile sub poster */
+  }
+
+  /* Stilizare pentru butoane */
+
+  /* Spațiu între elementele înrămate */
+
+  .item {
+    margin-top: 10px;
+    color: #8c8c8c;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+  }
+  .about {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  #about {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+    flex-shrink: 0;
+    margin-top: 8px;
+  }
+
+  #btnWatched {
+    border-radius: 100px;
+    background: #b92f2c;
+    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+    display: flex;
+    padding: 10px 12px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  #buttonWrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  #btnQueue {
+    display: flex;
+    padding: 10px 14px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #b92f2c;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  #btnWatched,
+  #btnQueue {
+    padding: 10px 12px;
+    margin-top: 20px;
+    border-radius: 100px;
+    font-size: 12px;
+    font-weight: 500;
+    transition: background-color 0.3s, color 0.3s;
+  }
+
+  #btnQueue:hover,
+  #btnQueue:focus {
+    background: #b92f2c;
+    color: #fff;
+    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  /* Fereastra modală */
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 89%;
+    height: 56%;
+
+    flex-shrink: 0;
+  }
+
+  #film-img {
+    width: 264px;
+    height: 373.551px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: lightgray 50% / cover no-repeat;
+    margin-top: 40px;
+    margin-left: 36px;
+  }
+
+  #content {
+    display: flex;
+  }
+
+  #right-content {
+    margin-left: 68px;
+  }
+
+  /* Cardul filmului */
+  .card {
+    flex-direction: column; /* Așează elementele într-o singură coloană */
+  }
+
+  /* Posterul filmului */
+  .poster {
+    order: 1; /* Așează posterul în partea de sus */
+    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+  }
+
+  /* Detaliile filmului */
+  .details {
+    order: 2; /* Așează detaliile sub poster */
+  }
+
+  /* Stilizare pentru butoane */
+
+  /* Spațiu între elementele înrămate */
+
+  .item {
+    color: #8c8c8c;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+  }
+  .about {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+    text-transform: uppercase;
+    margin-top: 20px;
+  }
+
+  #about {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+
+  #btnWatched {
+    display: flex;
+    padding: 12px 18px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #fff;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+  }
+
+  #buttonWrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  #btnQueue {
+    display: flex;
+    padding: 12px 18px;
+    align-items: flex-start;
+    gap: 10px;
+    color: #b92f2c;
+    text-align: center;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: uppercase;
+    margin-left: 8px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  /* Fereastra modală */
+  .modal {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+  }
+
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    width: 63%;
+    height: 558px;
+    flex-shrink: 0;
+  }
+
+  #film-img {
+    width: 375px;
+    height: 478px;
+    flex-shrink: 0;
+    border-radius: 5px;
+    background: lightgray 50% / cover no-repeat;
+    margin-top: 40px;
+    margin-left: 36px;
+  }
+
+  #content {
+    display: flex;
+  }
+
+  #right-content {
+    margin-left: 68px;
+  }
+
+  /* Cardul filmului */
+  .card {
+    flex-direction: column; /* Așează elementele într-o singură coloană */
+  }
+
+  /* Posterul filmului */
+  .poster {
+    order: 1; /* Așează posterul în partea de sus */
+    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+  }
+
+  /* Detaliile filmului */
+  .details {
+    order: 2; /* Așează detaliile sub poster */
+  }
+
+  /* Spațiu între elementele înrămate */
+
+  .item {
+    margin-top: 10px;
+    color: #8c8c8c;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 16px; /* 133.333% */
+  }
+  .about {
+    width: 100%;
+    flex-shrink: 0;
+  }
+
+  #about {
+    color: #000;
+    font-family: Roboto;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px; /* 166.667% */
+  }
+
+  #btnWatched {
+    display: flex;
+    padding: 14px 24px;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  #buttonWrapper {
+    display: flex;
+    margin-top: 30px;
+  }
+
+  #btnQueue {
+    display: flex;
+    padding: 14px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    margin-left: 8px;
+  }
+}
