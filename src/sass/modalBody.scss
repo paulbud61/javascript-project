@@ -1,6 +1,7 @@
 @media screen and (max-width: 320px) {
   /* Fereastra modală */
   .modal {
+    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -16,24 +17,21 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: calc(
-      100% - 40px
-    ); /* Ajustează lățimea la lățimea totală a ecranului minus marginile */
+    width: calc(100% - 40px);
     height: auto;
-    max-height: calc(
-      100% - 40px
-    ); /* Limitare la înălțimea maximă a ecranului minus marginile */
-    overflow-y: auto; /* Adaugă scrollbar dacă conținutul este prea lung */
+    max-height: calc(100% - 40px);
+    overflow-y: auto;
   }
 
   #film-img {
-    width: 100%; /* Ajustează imaginea să fie 100% din lățimea containerului */
-    height: auto; /* Menține proporțiile imaginii */
+    width: 100%;
+    height: auto;
     border-radius: 5px;
     background: lightgray 50% / cover no-repeat;
-    margin-top: 20px; /* Redu spațiul de sus pentru imagine */
-    margin-bottom: 10px; /* Adaugă spațiu între imagine și titlu */
+    margin-top: 20px;
+    margin-bottom: 10px;
   }
+
   .icon {
     display: inline-block;
     width: 1em;
@@ -42,33 +40,33 @@
     stroke: currentColor;
     fill: currentColor;
   }
+
   /* Cardul filmului */
   .card {
-    flex-direction: column; /* Așează elementele într-o singură coloană */
+    flex-direction: column;
   }
 
   /* Posterul filmului */
   .poster {
-    order: 1; /* Așează posterul în partea de sus */
+    order: 1;
   }
 
   /* Detaliile filmului */
   .details {
-    order: 2; /* Așează detaliile sub poster */
+    order: 2;
   }
 
   /* Spațiu între elementele înrămate */
-
   .item,
   .about {
     margin-top: 10px;
     font-size: 12px;
-    color: #8c8c8c; /* Culorile originale */
+    color: #8c8c8c;
   }
 
   .about {
     text-transform: uppercase;
-    color: #000; /* Culorile originale */
+    color: #000;
     margin-top: 20px;
   }
 
@@ -80,36 +78,28 @@
     border-radius: 100px;
     font-size: 12px;
     font-weight: 500;
+
+    &:hover,
+    &:focus {
+      transition: background-color 0.3s, color 0.3s;
+      background: #b92f2c;
+      color: #fff;
+      box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+    }
   }
 
   #btnWatched {
-    background: #b92f2c; /* Culorile originale */
-    color: #fff; /* Culorile originale */
-    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
-  }
-
-  #btnQueue {
-    border: 1px solid #000; /* Culorile originale */
-    background: #fff; /* Culorile originale */
-    color: #b92f2c; /* Culorile originale */
-  }
-  #btnWatched,
-  #btnQueue {
-    padding: 10px 12px;
-    margin-top: 20px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-  }
-
-  #btnQueue:hover,
-  #btnQueue:focus {
     background: #b92f2c;
     color: #fff;
-    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+  }
+
+  #btnQueue {
+    border: 1px solid #000;
+    background: #fff;
+    color: #b92f2c;
   }
 }
+
 @media screen and (min-width: 320px) {
   /* Fereastra modală */
   .modal {
@@ -144,24 +134,23 @@
 
   /* Cardul filmului */
   .card {
-    flex-direction: column; /* Așează elementele într-o singură coloană */
+    flex-direction: column;
   }
 
   /* Posterul filmului */
   .poster {
-    order: 1; /* Așează posterul în partea de sus */
-    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+    order: 1;
+    margin-bottom: 10px;
   }
 
   /* Detaliile filmului */
   .details {
-    order: 2; /* Așează detaliile sub poster */
+    order: 2;
   }
 
   /* Stilizare pentru butoane */
 
   /* Spațiu între elementele înrămate */
-
   .item {
     margin-top: 10px;
     color: #8c8c8c;
@@ -169,15 +158,16 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
   }
+
   .about {
     color: #000;
     font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
     text-transform: uppercase;
     margin-top: 20px;
   }
@@ -188,7 +178,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px; /* 166.667% */
+    line-height: 20px;
     flex-shrink: 0;
     margin-top: 8px;
   }
@@ -241,14 +231,14 @@
     border-radius: 100px;
     font-size: 12px;
     font-weight: 500;
-    transition: background-color 0.3s, color 0.3s;
-  }
 
-  #btnQueue:hover,
-  #btnQueue:focus {
-    background: #b92f2c;
-    color: #fff;
-    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+    &:hover,
+    &:focus {
+      transition: background-color 0.3s, color 0.3s;
+      background: #b92f2c;
+      color: #fff;
+      box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
+    }
   }
 }
 
@@ -272,7 +262,6 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: 89%;
     height: 56%;
-
     flex-shrink: 0;
   }
 
@@ -296,39 +285,39 @@
 
   /* Cardul filmului */
   .card {
-    flex-direction: column; /* Așează elementele într-o singură coloană */
+    flex-direction: column;
   }
 
   /* Posterul filmului */
   .poster {
-    order: 1; /* Așează posterul în partea de sus */
-    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+    order: 1;
+    margin-bottom: 10px;
   }
 
   /* Detaliile filmului */
   .details {
-    order: 2; /* Așează detaliile sub poster */
+    order: 2;
   }
 
   /* Stilizare pentru butoane */
 
   /* Spațiu între elementele înrămate */
-
   .item {
     color: #8c8c8c;
     font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
   }
+
   .about {
     color: #000;
     font-family: Roboto;
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
     text-transform: uppercase;
     margin-top: 20px;
   }
@@ -339,7 +328,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px; /* 166.667% */
+    line-height: 20px;
   }
 
   #btnWatched {
@@ -422,18 +411,18 @@
 
   /* Cardul filmului */
   .card {
-    flex-direction: column; /* Așează elementele într-o singură coloană */
+    flex-direction: column;
   }
 
   /* Posterul filmului */
   .poster {
-    order: 1; /* Așează posterul în partea de sus */
-    margin-bottom: 10px; /* Adaugă spațiu între poster și titlu */
+    order: 1;
+    margin-bottom: 10px;
   }
 
   /* Detaliile filmului */
   .details {
-    order: 2; /* Așează detaliile sub poster */
+    order: 2;
   }
 
   /* Spațiu între elementele înrămate */
@@ -445,8 +434,9 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 16px; /* 133.333% */
+    line-height: 16px;
   }
+
   .about {
     width: 100%;
     flex-shrink: 0;
@@ -458,7 +448,7 @@
     font-size: 12px;
     font-style: normal;
     font-weight: 500;
-    line-height: 20px; /* 166.667% */
+    line-height: 20px;
   }
 
   #btnWatched {
