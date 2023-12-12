@@ -4,7 +4,7 @@ const modal = document.getElementById('info-modal'); // ID-ul modalului
 const btn = document.getElementById('myBtn');
 
 // Get the <button> element that closes the modal
-const closeButton = document.querySelector('.close-modal-team');
+const closeButton = document.querySelector('.icon-close-1');
 
 // When the user clicks the button, open the modal
 btn.onclick = function () {
