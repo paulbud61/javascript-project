@@ -96,30 +96,35 @@ label {
   padding: 7px;
   transform: translateX(-50%);
   overflow-y: scroll;
-  background-image: url(../images/modal_background.jpg);
+  background-image:linear-gradient(#182142c4, #18214263), url(../images/modal_background.jpg);
   max-width: 840px;
   height: 100%;
   max-height: 558px;
-  border-radius: 6px;
+  border-radius: 7px;
   height: max-content;
   padding-left: 20px;
+  box-shadow: 5px 5px 5px #02164061;
+
 }
 
 .team__title {
   cursor: pointer;
-  padding-top: 13px;
-  font-family: 'Roboto';
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 30px;
+  font-family: Roboto;
+  font-size: 23px;
   font-style: normal;
   font-weight: 500;
-  font-size: 23px;
-  margin-bottom: 20px;
-  text-align: center;
 
   @media screen and (min-width: 768px) {
     padding-top: 15px;
-    margin-bottom: 30px;
     font-size: 30px;
   }
+}
+
+.waviy {
+  -webkit-box-reflect: below -67px linear-gradient(transparent, rgba(0,0,0,.2));
 }
 
 .waviy span {
@@ -141,8 +146,9 @@ label {
     transform: translateY(0);
   }
   20% {
-    transform: translateY(-20px);
+    transform: translateY(-15px);
   }
+
 }
 
 .team__box {
@@ -200,7 +206,7 @@ label {
   border: 2px;
   margin: auto;
   border-radius: 50px;
-  box-shadow: 0px 0px 3px 5px #ccc;
+  box-shadow: 0px 0px 3px 3px #ccc;
 }
 
 .team__name {
@@ -210,6 +216,8 @@ label {
   transition-duration: 0.5s;
   cursor: pointer;
   gap: 10px;
+  margin: 0;
+
 
   &:hover,
   &:focus {
@@ -223,7 +231,6 @@ label {
 
   @media screen and (min-width: 1280px) {
     font-size: 22px;
-    margin: 0;
   }
 }
 
