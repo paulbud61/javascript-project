@@ -29,6 +29,13 @@
     overflow-y: auto;
   }
 
+  .icon-close-1 {
+    position: absolute;
+    top: 10px; /* Ajustați distanța de la partea de sus a modalului */
+    right: 10px; /* Ajustați distanța de la partea dreaptă a modalului */
+    cursor: pointer;
+    fill: #000; /* Ajustați culoarea iconiței în funcție de nevoi */
+  }
   #film-img {
     width: 100%;
     height: auto;
@@ -136,6 +143,13 @@
     flex-shrink: 0;
   }
 
+  .icon-close-1 {
+    position: absolute;
+    top: 10px; /* Ajustați distanța de la partea de sus a modalului */
+    right: 10px; /* Ajustați distanța de la partea dreaptă a modalului */
+    cursor: pointer;
+    fill: #000; /* Ajustați culoarea iconiței în funcție de nevoi */
+  }
   .icon {
     display: inline-block;
     width: 1em;

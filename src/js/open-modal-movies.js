@@ -1,16 +1,15 @@
 const modal = document.getElementById('info-modal'); // ID-ul modalului
-
-// Get the button that opens the modal
-const btn = document.getElementById('myBtn');
+const galleryItems = document.querySelectorAll('.gallery'); // Selectează toate elementele cu clasa "gallery__item"
 
 // Get the <button> element that closes the modal
 const closeButton = document.querySelector('.icon-close-1');
 
-// When the user clicks the button, open the modal
-btn.onclick = function () {
-  modal.style.display = 'flex';
-};
-
+// Deschide fereastra modală când se face clic pe orice element cu clasa "gallery__item"
+galleryItems.forEach(item => {
+  item.addEventListener('click', function () {
+    modal.style.display = 'flex';
+  });
+});
 // When the user clicks on the close button, close the modal
 closeButton.onclick = function () {
   modal.style.display = 'none';
