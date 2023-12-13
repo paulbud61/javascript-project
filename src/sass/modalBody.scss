@@ -25,7 +25,8 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     width: calc(100% - 40px);
     height: auto;
-    max-height: calc(100% - 40px);
+
+    max-height: 90%; /* Adjust this value to your preference */
     overflow-y: auto;
   }
 
@@ -138,9 +139,11 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 87.5%;
+    width: 280px;
     height: 930px;
     flex-shrink: 0;
+    max-height: 90%; /* Adjust this value to your preference */
+    overflow-y: auto;
   }
 
   .icon-close-1 {
@@ -315,9 +318,11 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 89%;
-    height: 56%;
+    width: 704px;
+    height: 552px;
     flex-shrink: 0;
+    max-height: 90%; /* Adjust this value to your preference */
+    overflow-y: auto;
   }
 
   #film-img {
@@ -448,9 +453,11 @@
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 63%;
+    width: 806px;
     height: 558px;
     flex-shrink: 0;
+    max-height: 90%; /* Adjust this value to your preference */
+    overflow-y: auto;
   }
 
   #film-img {
