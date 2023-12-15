@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <header class="library" id="home">
   <div class="header__container container">
     <div class="library__wrapper">
@@ -61,3 +62,76 @@
     </div>
   </div>
 </header>
+=======
+<section class="header">
+    <div class="container header-container header-container--home">
+      <div class="theme-switch__control">
+        <input
+          class="theme-switch__toggle"
+          type="checkbox"
+          name="theme"
+          id="theme-switch-toggle"
+          aria-label="Change theme"
+        />
+        <label
+          aria-hidden="true"
+          class="theme-switch__track"
+          for="theme-switch-toggle"
+        ></label>
+        <div aria-hidden="true" class="theme-switch__marker"></div>
+      </div>
+      <div class="header-nav-container">
+        <div class="logo-container">
+          <svg class="header-logo" width="24px" height="24px">
+            <use href="./images/symbol-defs.svg#icon-film"></use>
+          </svg>
+          <h1 class="header__title">Filmoteka</h1>
+        </div>
+        <nav>
+          <ul class="site-nav__list">
+            <li class="site-nav__item">
+              <button
+                class="site-nav__button is-active js-home"
+                data-request="home"
+                aria-label="home"
+              >
+                Home
+              </button>
+            </li>
+            <li class="site-nav__item">
+              <button
+                class="site-nav__button js-library"
+                data-request="library"
+                aria-label="my library"
+              >
+                My library
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <ul class="library__list">
+        <li class="library__item">
+          <button
+            class="button button--library"
+            data-request="watched"
+            aria-label="watched"
+          >
+            Watched
+          </button>
+        </li>
+        <li class="library__item">
+          <button
+            class="button button--library is-active"
+            data-request="queue"
+            aria-label="queue"
+          >
+            Queue
+          </button>
+        </li>
+      </ul>
+      </div>
+    </div>
+  </section>
+  
+>>>>>>> Stashed changes
