@@ -1,9 +1,6 @@
-
-
 .body-library {
     background-color: rgba(240, 240, 240, 1);
 }
-
 
 .cards-watched-container {
     margin: 20px auto;
@@ -11,8 +8,7 @@
     flex-wrap: wrap;
     justify-content: center;
     gap: 30px;
-     max-width: 280px;
-    
+    max-width: 280px;
 }
 
 .content-library__image {
@@ -25,38 +21,36 @@
     justify-content: center;
 }
 
-  .content-library__card {
-    @include media(768px) {
-       display: flex;
-      align-items: center;
-      justify-content: center;
+.content-library__card {
+    @media screen and (min-width: 768px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
-  }
+}
 
 .content-library__title {
     display: flex;
     align-items: center;
     justify-content: center;
 
-    @include font(16px, 1px);
+    font-size: 16px;
     margin-top: 30px;
-
 }
 
-  .content-library__list {
-    @include media(768px) {
-      margin-left: 40px;
+.content-library__list {
+    @media screen and (min-width: 768px) {
+        margin-left: 40px;
     }
 
-    @include media(768px) {
-       margin-left: 80px;
-     }
-  }
+    @media screen and (min-width: 768px) {
+        margin-left: 80px;
+    }
+}
 
 .content-library__link {
     position: relative;
     display: inline-block;
-
     font-weight: 500;
 
     &:after {
@@ -86,7 +80,7 @@
 .content-library__text {
     margin-top: 30px;
     margin-bottom: 40px;
-    @include font(14px, 16px);
+    font-size: 14px;
     font-weight: 400;
     text-align: center;
 }
@@ -97,13 +91,11 @@
     }
 
     .content-library__title {
-        @include font(24px, 16px);
-
+        font-size: 24px;
     }
-
 }
 
-@media screen and (min-width: 1280) {
+@media screen and (min-width: 1280px) {
     .content-library__image {
         min-width: 300px;
     }
