@@ -16,7 +16,7 @@ div a {
 .header-home {
   position: relative;
   background-repeat: no-repeat;
-  background-image: url('./images/background-header-1x-m.png');
+  background-image: url('./images/background-header-1x-phone.png');
   background-position: center;
   background-size: 100%;
   width: 100%;
@@ -42,7 +42,7 @@ div a {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .header-home {
-    background-image: url('./images/background-header-2x-m.png');
+    background-image: url('./images/background-header-2x-phone.png');
   }
 }
 
@@ -163,7 +163,7 @@ div a {
   color: #fff;
   flex-shrink: 0;
 }
-/*-------------------------------------Very Small Devices----*/
+/*--Very Small Devices--*/
 @media (max-width: 320px) {
   .header-home {
     height: 100%;
@@ -201,14 +201,14 @@ div a {
 @media (min-width: 768px) {
   .header-home {
     background-repeat: no-repeat;
-    background-image: url('./images/background-header-1x-t.png');
+    background-image: url('./images/background-header-1x-tablet.png');
     background-size: cover;
   }
   @media (min-device-pixel-ratio: 2),
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .header-home {
-      background-image: url('./images/background-header-2x-t.png');
+      background-image: url('./images/background-header-2x-tablet.png');
     }
   }
   .site-nav-button {
@@ -246,7 +246,7 @@ div a {
 /*--Design Desktop--*/
 @media (min-width: 1280px) {
   .header-home {
-    background-image: url('./images/background-header-1x-d.png');
+    background-image: url('./images/background-header-1x-desktop.png');
     padding: 25px;
     justify-content: space-between;
   }
@@ -255,7 +255,7 @@ div a {
     (min-resolution: 192dpi),
     (min-resolution: 2dppx) {
     .header-home {
-      background-image: url('./images/background-header-2x-d.png');
+      background-image: url('./images/background-header-2x-desktop.png');
     }
   }
 
