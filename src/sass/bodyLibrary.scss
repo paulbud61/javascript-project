@@ -1,0 +1,75 @@
+#bodyLibraryContainer {
+  width: 320px;
+  height: auto;
+  display: flex;
+  margin: 20px auto;
+  justify-content: center;
+}
+
+.categoryTitle {
+  font-family: 'Roboto';
+  font-weight: 500;
+  font-size: 30px;
+  color: #b92f2c;
+  text-align: center;
+}
+
+#watchedListContainer ol,
+#queueListContainer ol {
+  margin-top: 20px;
+}
+
+#watchedListContainer li,
+#queueListContainer li {
+  display: flex;
+  justify-content: space-between;
+  width: 280px;
+  padding: 5px;
+}
+
+#watchedListContainer li span,
+#queueListContainer li span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 80%;
+}
+
+#watchedListContainer p,
+#queueListContainer p {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 500;
+  margin-top: 20px;
+  width: 280px;
+  height: 360px;
+  background: url('../images/notification-meme/spongebob.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 5px;
+}
+
+.remove-button {
+  width: 40px;
+  height: 20px;
+  line-height: 20px;
+  text-align: center;
+  background-color: #fff;
+  border: 1px solid #000;
+  color: #000;
+  border-radius: 5px;
+  transition: background-color 0.25s;
+}
+
+.remove-button:hover {
+  color: #fff;
+  background-color: #b92f2c;
+}
+
+@media (min-width: 768px) {
+  #watchedListContainer li,
+  #queueListContainer li {
+    width: 450px;
+  }
+}

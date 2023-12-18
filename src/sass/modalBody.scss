@@ -1,119 +1,3 @@
-@media screen and (max-width: 320px) {
-  /* Fereastra modală */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: calc(100% - 40px);
-    height: auto;
-
-    max-height: 90%; /* Adjust this value to your preference */
-    overflow-y: auto;
-  }
-
-  .icon-close-1 {
-    position: absolute;
-    top: 10px; /* Ajustați distanța de la partea de sus a modalului */
-    right: 10px; /* Ajustați distanța de la partea dreaptă a modalului */
-    cursor: pointer;
-    fill: #000; /* Ajustați culoarea iconiței în funcție de nevoi */
-  }
-  #film-img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
-    background: lightgray 50% / cover no-repeat;
-    margin-top: 20px;
-    margin-bottom: 10px;
-  }
-
-  .icon {
-    display: inline-block;
-    width: 1em;
-    height: 1em;
-    stroke-width: 0;
-    stroke: currentColor;
-    fill: currentColor;
-  }
-
-  /* Cardul filmului */
-  .card {
-    flex-direction: column;
-  }
-
-  /* Posterul filmului */
-  .poster {
-    order: 1;
-  }
-
-  /* Detaliile filmului */
-  .details {
-    order: 2;
-  }
-
-  /* Spațiu între elementele înrămate */
-  .item,
-  .about {
-    margin-top: 10px;
-    font-size: 12px;
-    color: #8c8c8c;
-  }
-
-  .about {
-    text-transform: uppercase;
-    color: #000;
-    margin-top: 20px;
-  }
-
-  /* Stilizare pentru butoane */
-  #btnWatched,
-  #btnQueue {
-    padding: 10px 12px;
-    margin-top: 20px;
-    border-radius: 100px;
-    font-size: 12px;
-    font-weight: 500;
-
-    &:hover,
-    &:focus {
-      transition: background-color 0.3s, color 0.3s;
-      background: #b92f2c;
-      color: #fff;
-      box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
-    }
-  }
-
-  #btnWatched {
-    background: #b92f2c;
-    color: #fff;
-  }
-
-  #btnQueue {
-    border: 1px solid #000;
-    background: #fff;
-    color: #b92f2c;
-  }
-}
-
 @media screen and (min-width: 320px) {
   /* Fereastra modală */
   .modal {
@@ -132,27 +16,18 @@
 
   .modal-content {
     position: absolute;
-    top: 50%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 280px;
-    height: 930px;
+    width: 87.5%;
+    height: auto;
     flex-shrink: 0;
-    max-height: 90%; /* Adjust this value to your preference */
-    overflow-y: auto;
   }
 
-  .icon-close-1 {
-    position: absolute;
-    top: 10px; /* Ajustați distanța de la partea de sus a modalului */
-    right: 10px; /* Ajustați distanța de la partea dreaptă a modalului */
-    cursor: pointer;
-    fill: #000; /* Ajustați culoarea iconiței în funcție de nevoi */
-  }
   .icon {
     display: inline-block;
     width: 1em;
@@ -160,6 +35,11 @@
     stroke-width: 0;
     stroke: currentColor;
     fill: currentColor;
+    cursor: pointer;
+  }
+
+  #close-modal {
+    text-align: right;
   }
 
   #film-img {
@@ -220,17 +100,18 @@
     line-height: 20px;
     flex-shrink: 0;
     margin-top: 8px;
+    text-align: justify;
   }
 
   #btnWatched {
-    border-radius: 100px;
-    background: #b92f2c;
-    box-shadow: 0px 0px 7px 0px rgba(27, 27, 27, 0.15);
     display: flex;
-    padding: 10px 12px;
+    padding: 10px 14px;
     align-items: flex-start;
     gap: 10px;
-    color: #fff;
+    border-radius: 100px;
+    border: 1px solid #000;
+    background: #fff;
+    color: #b92f2c;
     text-align: center;
     font-family: Roboto;
     font-size: 12px;
@@ -282,56 +163,13 @@
 }
 
 @media screen and (min-width: 768px) {
-  #myBtn {
-    justify-content: center;
-    background-color: green;
-    margin: 0 auto;
-    text-align: center;
-    display: flex;
-    width: 800px;
-    height: 300px;
-    color: yellow;
-    font-size: 50px;
-    padding-top: 90px;
-  }
-  /* Fereastra modală */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 704px;
-    height: 552px;
-    flex-shrink: 0;
-    max-height: 90%; /* Adjust this value to your preference */
-    overflow-y: auto;
-  }
-
   #film-img {
     width: 264px;
     height: 373.551px;
     flex-shrink: 0;
     border-radius: 5px;
     background: lightgray 50% / cover no-repeat;
-    margin-top: 40px;
+    margin-top: 0px;
     margin-left: 36px;
   }
 
@@ -396,7 +234,7 @@
     padding: 12px 18px;
     align-items: flex-start;
     gap: 10px;
-    color: #fff;
+    color: #b92f2c;
     text-align: center;
     font-family: Roboto;
     font-size: 12px;
@@ -404,6 +242,7 @@
     font-weight: 500;
     line-height: normal;
     text-transform: uppercase;
+    margin-left: 8px;
   }
 
   #buttonWrapper {
@@ -429,44 +268,12 @@
 }
 
 @media screen and (min-width: 1280px) {
-  /* Fereastra modală */
-  .modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0, 0, 0); /* Fallback color */
-    background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
-  }
-
-  .modal-content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    width: 806px;
-    height: 558px;
-    flex-shrink: 0;
-    max-height: 90%; /* Adjust this value to your preference */
-    overflow-y: auto;
-  }
-
   #film-img {
     width: 375px;
     height: 478px;
     flex-shrink: 0;
     border-radius: 5px;
     background: lightgray 50% / cover no-repeat;
-    margin-top: 40px;
     margin-left: 36px;
   }
 

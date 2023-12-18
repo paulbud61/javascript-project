@@ -1,4 +1,4 @@
 export const refs = {
-  foterLink: document.querySelector('.footer__link'),
-
+  //footer modal
+  footerLink: document.querySelector('.footer__link'),
 };

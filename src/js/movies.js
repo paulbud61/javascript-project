@@ -2,8 +2,8 @@ import axios from 'axios';
 import Notiflix from 'notiflix';
 import { debounce } from 'lodash';
 
-const searchForm = document.querySelector('.search-form');
-const searchInput = document.querySelector('.search-form__input');
+const searchForm = document.querySelector('.search-bar');
+const searchInput = document.querySelector('.search-bar__input');
 const galleryElement = document.querySelector('.gallery');
 const paginationContainer = document.querySelector('.pagination');
 const loader = document.getElementById('loader'); // Added loader element
@@ -15,6 +15,7 @@ let trendingMovies = [];
 
 const apiKey = 'd1ba1e64f9d6a08c9b908b32af105306';
 const baseURL = 'https://api.themoviedb.org/3';
+const imgURL = 'https://image.tmdb.org/t/p/w500/';
 const trendingEndpoint = '/discover/movie';
 
 // Show loader function
@@ -66,6 +67,58 @@ async function fetchMovies(query, page) {
   } finally {
     hideLoader();
   }
+}
+
+// Function to fetch movie details based on movie ID
+export async function fetchMovieDetails(movieId) {
+  try {
+    const response = await axios.get(`${baseURL}/movie/${movieId}`, {
+      params: {
+        api_key: apiKey,
+      },
+    });
+
+    const movieDetails = response.data;
+    movieDetails.movieId = movieId;
+
+    return movieDetails;
+  } catch (error) {
+    console.error(error);
+    return null;
+  }
+}
+
+// Function to update modal content with movie details
+export function updateModalContent(movieDetails, movieId) {
+  const modalTitleElement = document.getElementById('film-title');
+  const votesElement = document.getElementById('votes');
+  const popularityElement = document.getElementById('popularity');
+  const origTitleElement = document.getElementById('origTitle');
+  const genreElement = document.getElementById('genre');
+  const aboutElement = document.getElementById('about');
+  const imgElement = document.getElementById('film-img');
+
+  // Update modal content with movie details
+  modalTitleElement.textContent = movieDetails.title;
+  votesElement.textContent = movieDetails.vote_count;
+  popularityElement.textContent = movieDetails.popularity;
+  origTitleElement.textContent = movieDetails.original_title;
+  genreElement.textContent = movieDetails.genres
+    .map(genre => genre.name)
+    .join(', ');
+  if (movieDetails.overview) {
+    aboutElement.textContent = movieDetails.overview;
+  } else {
+    aboutElement.textContent = 'No description available.';
+  }
+  if (movieDetails.poster_path) {
+    imgElement.style.backgroundImage = `url('${
+      imgURL + movieDetails.poster_path
+    }')`;
+  } else {
+    imgElement.style.backgroundImage = 'none';
+  }
+  imgElement.style.backgroundColor = '#000';
 }
 
 async function fetchTrendingMovies(page) {
@@ -146,28 +199,21 @@ async function updateGallery(movieData) {
 
   for (const movie of movieData) {
     const movieRating = movie.vote_average;
-    const posterSrc = movie.poster_path
-      ? `https://image.tmdb.org/t/p/w500${movie.poster_path}`
-      : '';
+    const posterSrc = movie.poster_path ? `${imgURL + movie.poster_path}` : '';
 
     const genres = await fetchMovieGenres(movie.id);
 
     movieHTML += `
-      <a class="gallery__item" href="#">
+      <a class="gallery__item" href="#" movie-id="${movie.id}">
         <div class="gallery__rating" style="background-color: ${getRatingColor(
           movieRating
         )}">${Math.round(Number(movieRating) * 10) / 10}</div>
         <figure class="gallery__figure">
-          <div class="gallery__img" style="background-image: url(${posterSrc}); ${
+          <div class="gallery__img" style="background-image: url(${posterSrc}); background-size: cover; ${
       movie.poster_path
         ? ''
         : 'background-color: #000; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: bold; text-decoration: none;'
     }">
-            ${
-              movie.poster_path
-                ? '' // If there's a poster, show nothing extra
-                : 'No poster available'
-            }
           </div>
           <figcaption class="gallery__figcaption">
             <div class="gallery__caption">
