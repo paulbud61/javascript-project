@@ -1,7 +1,7 @@
-import * as movies from './js/movies';
+import './js/movies';
 
-import * as teamModal from './js/team-load-to-modal';
+import './js/team-load-to-modal';
 
-import { refs } from './js/refs';
+import './js/open-modal-movies';
 
-import * as modal from './js/open-modal-movies';
+import './js/changer-theme';
