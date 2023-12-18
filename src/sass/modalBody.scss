@@ -1,5 +1,5 @@
 @media screen and (min-width: 320px) {
-  /* Fereastra modală actualizată...*/
+  /* Fereastra modală actualizată.*/
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -16,9 +16,9 @@
 
   .modal-content {
     position: absolute;
-    top: 50%;
+    top: auto;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, 0%);
     background-color: #fff;
     padding: 20px;
     border-radius: 5px;
